@@ -1,0 +1,2581 @@
+/* ===== AboutBanner.css ===== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  height: 60vh;
+  padding-left: 0;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===== StorySection.css ===== */
+.story-section-container {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 8rem;
+  flex-wrap: wrap;
+}
+
+.story-col {
+  flex: 1 1 350px;
+  max-width: 500px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.story-dot-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 24px;
+}
+
+.story-dot {
+  width: 25px;
+  height: 25px;
+  background: none;
+  border-radius: 50%;
+  border: 3px solid #CCC9F8;
+}
+
+.story-dot-end {
+  background: none;
+  border-radius: 50%;
+  border: 3px solid #CCC9F8;
+}
+
+.story-line {
+  width: 4px;
+  height: 320px;
+  background: #CCC9F8;
+}
+
+.story-content {
+  flex: 1;
+}
+
+.story-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.story-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.6;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.blog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  height: 60vh;
+  padding-left: 0;
+}
+
+.blog-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===== Gallery.css ===== */
+.three-col-gallery {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 1;
+}
+
+.col-3 {
+  flex: 2;
+  /* Cột 3 rộng gấp đôi mỗi cột còn lại */
+}
+
+.col-1 .gallery-img.full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+  border-radius: 18px;
+}
+
+.col-2 .gallery-img.half {
+  width: 100%;
+  height: 48%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 18px;
+}
+
+.col-3 .gallery-img.row-img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  border-radius: 18px;
+  margin-bottom: 12px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 12px;
+}
+
+.col-3 .gallery-img.small {
+  width: 50%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 18px;
+}
+
+/* ===== BeautyBlog.css ===== */
+.beauty-blog-container {
+  background-color: #CCC9F8;
+  color: white;
+  padding: 10rem;
+  margin-top: 6rem;
+  text-align: left;
+}
+
+.beauty-blog-heading {
+  color: #000000;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.beauty-blog-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.beauty-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.beauty-card {
+  background-color: #fff;
+  color: #CCC9F8;
+  border-radius: 50px;
+  padding: 20px;
+  width: 30%;
+  text-align: justify;
+  transition: box-shadow 0.2s;
+}
+
+.beauty-card-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: filter 0.2s;
+  display: block;
+  margin-left: 10px;
+}
+
+.beauty-card-title {
+  width: 110%;
+  color: #222;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.beauty-card-desc {
+  color: #000000;
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.beauty-learn-more {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 300;
+  background: #CCC9F8;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+.beauty-learn-more .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.beauty-learn-more:hover {
+  color: #fff;
+  background: #b3b0e6;
+}
+
+.beauty-learn-more:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* Hiệu ứng đổi màu icon khi hover cho BeautyBlog */
+.beauty-card:hover .beauty-card-icon {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
+}
+
+/* =====BlogGrid.css ===== */
+.blog-grid-section {
+  width: 100%;
+  margin: 40px 0;
+  text-align: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+}
+
+.blog-grid-title {
+  display: inline-block;
+  background: #CCC9F8;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 20px 40px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.blog-grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  margin-top: 32px;
+  justify-items: center;
+}
+
+.blog-grid-card {
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 420px;
+  max-width: 370px;
+  width: 100%;
+}
+
+.blog-grid-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.blog-grid-img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+.blog-grid-price {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: #CCC9F8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.blog-grid-content {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.blog-grid-btn {
+  background: #CCC9F8;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.blog-grid-btn:hover {
+  background: #a7a3e0;
+}
+
+.blog-grid-date {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 10px;
+  margin-left: 6px;
+}
+
+.blog-grid-post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.blog-grid-desc {
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.blog-grid-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.blog-grid-price-inline {
+  background: #CCC9F8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .blog-grid-list {
+    grid-template-columns: 1fr;
+  }
+  .blog-grid-title {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Responsive cho BlogGrid */
+@media (max-width: 1200px) {
+  .blog-grid-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .blog-grid-list {
+    gap: 24px 12px;
+  }
+}
+@media (max-width: 900px) {
+  .blog-grid-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .blog-grid-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 8px;
+  }
+  .blog-grid-card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .blog-grid-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+  }
+  .blog-grid-title {
+    font-size: 1.1rem;
+    padding: 4px 8px;
+  }
+  .blog-grid-list {
+    grid-template-columns: 1fr;
+    gap: 14px 0;
+  }
+  .blog-grid-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .blog-grid-img-wrapper {
+    height: 140px;
+  }
+  .blog-grid-img {
+    height: 140px;
+  }
+  .blog-grid-content {
+    margin-top: 2rem;
+    padding: 10px 4px;
+  }
+}
+
+/* ===== ContactBanner.css ===== */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  height: 60vh;
+  padding-left: 0;
+}
+
+.contacts-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===== ContactSection.css ===== */
+/*
+  CSS cho ContactSection:
+  - Căn chỉnh bố cục 2 cột, responsive, padding lớn cho vùng hiển thị.
+  - Định dạng các thành phần: tiêu đề, danh sách thông tin, form, bản đồ, mạng xã hội.
+  - Hiệu ứng hover cho icon, link, nút gửi, icon mạng xã hội, v.v.
+*/
+
+.contact-section-container {
+  /* Bố cục 2 cột, căn giữa, padding lớn */
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 6rem;
+}
+
+.contact-col {
+  /* Cột linh hoạt, dọc, không nền */
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: none;
+}
+
+.contact-title {
+  /* Tiêu đề các block */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info-list {
+  /* Danh sách thông tin liên hệ */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info-item {
+  /* Một dòng thông tin liên hệ */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info-icon {
+  /* Icon trước số điện thoại, email, map */
+  width: 22px;
+  height: 22px;
+  transition: filter 0.2s;
+  filter: grayscale(0%) brightness(1) sepia(0);
+}
+
+.contact-info-item:hover .contact-info-icon,
+.contact-maps-block:hover .contact-info-icon {
+  /* Hover đổi màu icon */
+  filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
+}
+
+.contact-info-link {
+  /* Link số điện thoại, email */
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.contact-info-link:hover {
+  /* Hover đổi màu link */
+  color: #CCC9F8;
+}
+
+.contact-maps-title {
+  margin-top: 18px;
+}
+
+.contact-maps-block {
+  /* Block bản đồ, click được */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.contact-maps-block:hover .contact-maps-address {
+  /* Hover đổi màu địa chỉ map */
+  color: #CCC9F8;
+}
+
+.contact-maps-address {
+  color: #222;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.contact-maps-iframe-wrapper {
+  width: 100%;
+}
+
+.contact-form {
+  /* Form liên hệ */
+  gap: 20px;
+}
+
+.contact-form-row {
+  /* Một hàng trong form */
+  display: flex;
+  gap: 12px;
+}
+
+.contact-input {
+  /* Input và textarea */
+  flex: 1;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 2rem;
+}
+
+.contact-input:focus {
+  border: 1.5px solid #CCC9F8;
+}
+
+.contact-textarea {
+  /* Textarea nội dung tin nhắn */
+  resize: vertical;
+  min-height: 200px;
+}
+
+.contact-submit-btn {
+  /* Nút gửi tin nhắn */
+  background: #CCC9F8;
+  color: #222;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-submit-btn .arrow {
+  /* Mũi tên chỉ hiện khi hover */
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.contact-submit-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+.contact-submit-btn:hover {
+  color: #fff;
+}
+
+.contact-social-title {
+  margin-top: 24px;
+}
+
+.contact-social-sub {
+  /* Phụ đề mạng xã hội */
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.contact-social-icons {
+  /* Dãy icon mạng xã hội */
+  display: flex;
+  gap: 18px;
+  margin-top: 4px;
+}
+
+.contact-social-icon {
+  /* Icon mạng xã hội */
+  width: 32px;
+  height: 32px;
+  transition: filter 0.2s;
+  filter: grayscale(0%) brightness(1) sepia(0);
+}
+
+.contact-social-icon-link:hover .contact-social-icon {
+  /* Hover đổi màu icon mạng xã hội */
+  filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
+}
+
+/* ===== Banner.css ===== */
+.banner-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+}
+
+.banner-content {
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 60px 45px;
+  max-width: 450px;
+  margin-right: 150px;
+  text-align: justify;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.banner-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.banner-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+.banner-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.banner-btn:hover {
+  color: #fff;
+}
+
+.banner-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* ===== HomeShowcase.css ===== */
+.service-showcase {
+  width: 100%;
+  background: none;
+  border-radius: 18px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+}
+
+.service-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  color: #CCC9F8;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  /* Đảm bảo các cột cao bằng nhau */
+}
+
+.service-col {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Đảm bảo chiều cao bằng nhau cho các cột */
+}
+
+.service-icon {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.service-titles {
+  margin-bottom: 8px;
+}
+
+.service-col-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+  /* căn giữa */
+  margin-bottom: 10px;
+  min-height: 48px;
+  /* Đảm bảo chiều cao cố định cho tiêu đề */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.service-col-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 2px;
+  text-align: justify;
+  min-height: 90px;
+  /* Đảm bảo chiều cao cố định cho phụ đề */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ===== HomeBlog.css ===== */
+.home-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: none;
+  max-width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+}
+
+.home-blog-img-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-blog-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.home-blog-content-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.home-blog-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.home-blog-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.home-blog-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  margin-right: auto;
+}
+
+.home-blog-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.home-blog-btn:hover {
+  color: #fff;
+}
+
+.home-blog-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* ===== HomeHairBlog.css ===== */
+.home-hair-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: none;
+  max-width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.home-hair-blog-content-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.home-hair-blog-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.home-hair-blog-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.home-hair-blog-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  margin-right: auto;
+}
+
+.home-hair-blog-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.home-hair-blog-btn:hover {
+  color: #fff;
+}
+
+.home-hair-blog-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+.home-hair-blog-img-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hair-blog-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HomeIntro.css ===== */
+.home-intro {
+  background: #CCC9F8;
+  width: 100%;
+  padding: 50px 0 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5rem auto;
+}
+
+.home-intro-title {
+  color: #222;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ===== FooterSocial.css (trong home) ===== */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 0 16px 0;
+}
+
+.footer-social-logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+.footer-social-icons-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon-link {
+  display: flex;
+  align-items: center;
+  transition: filter 0.2s;
+}
+
+.footer-social-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: grayscale(0%) brightness(0) invert(0);
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+
+.footer-social-icon-link:hover .footer-social-icon {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
+  /* #CCC9F8 tint */
+}
+
+/* ===== ServicesBanner.css ===== */
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  height: 60vh;
+  padding-left: 0;
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===== ServicesIntro.css ===== */
+.services-intro {
+  background: #CCC9F8;
+  width: 100%;
+  padding: 50px 0 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto 5rem auto;
+}
+
+.services-intro-title {
+  color: #222;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.services-intro-title-link:hover {
+  color: #fff;
+  transition: color 0.2s;
+}
+
+/* --- Đảm bảo phụ đề nằm dưới tiêu đề cho các banner/trang chính --- */
+.about-container,
+.blog-container,
+.services-container,
+.contact-container,
+.booking-container {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-title,
+.blog-title,
+.services-title,
+contacts-title,
+.booking-title {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-subtitle,
+.blog-subtitle,
+.services-subtitle,
+.contacts-subtitle,
+.booking-subtitle {
+  display: block;
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Global Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* Banner Section */
+  .banner-content {
+    padding: 40px;
+    margin: 0 20px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  /* Services Section */
+  .service-showcase {
+    padding: 60px 40px;
+  }
+
+  .service-row {
+    gap: 30px;
+  }
+  
+  /* Blog Sections */
+  .home-blog,
+  .home-hair-blog {
+    padding: 40px;
+    gap: 30px;
+  }
+
+  /* About Section */
+  .story-section-container {
+    padding: 40px;
+  }
+
+  /* Contact Section */
+  .contact-section-container {
+    padding: 40px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-col {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  /* Banner Section */
+  .banner-content {
+    padding: 30px;
+  }
+  
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  /* Services Section */
+  .service-row {
+    flex-direction: column;
+  }
+
+  .service-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Blog Sections */
+  .home-blog,
+  .home-hair-blog {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .home-blog-img-col,
+  .home-hair-blog-img-col {
+    width: 100%;
+  }
+
+  .home-blog-content-col,
+  .home-hair-blog-content-col {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  /* About Section */
+  .story-section-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .story-col {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  /* Contact Form */
+  .contact-form-row {
+    flex-direction: column;
+  }
+  
+  .contact-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Social Icons */
+  .contact-social-icons,
+  .footer-social-icons-row {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+  /* Banner Section */
+  .banner-content {
+    padding: 20px;
+  }
+
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Section Titles */
+  .service-title,
+  .about-title,
+  .blog-title,
+  .services-title,
+  .contacts-title {
+    font-size: 1.8rem;
+    padding: 20px 0;
+  }
+  
+  /* Form Elements */
+  .booking-input,
+  .contact-input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Buttons */
+  .banner-btn,
+  .home-blog-btn,
+  .home-hair-blog-btn,
+  .booking-btn,
+  .contact-submit-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* Maps */
+  .contact-maps-iframe-wrapper iframe {
+    height: 200px;
+  }
+}
+
+/* ===== ServiceHighlight.css ===== */
+.service-highlight-bg {
+  background: #CCC9F8;
+  padding: 9rem 0 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+.service-highlight-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8rem;
+  letter-spacing: 2px;
+}
+
+.service-highlight-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Hình tròn nền nằm sau ảnh, góc trên bên trái */
+.service-highlight-decor {
+  position: absolute;
+  top: -80px;
+  left: 380px;
+  width: 160px;
+  height: 160px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Đảm bảo ảnh nằm trên hình tròn */
+.service-highlight-img {
+  position: relative;
+  z-index: 1;
+}
+
+.service-highlight-img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.service-highlight-box {
+  background: #fff;
+  padding: 32px 36px 28px 36px;
+  position: absolute;
+  right: 10%;
+  bottom: -30px;
+  min-width: 320px;
+  text-align: left;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-highlight-box-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+.service-highlight-btn {
+  background: #CCC9F8;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-highlight-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.service-highlight-btn:hover {
+  color: #fff;
+}
+
+.service-highlight-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+@media (max-width: 900px) {
+  .service-highlight-content {
+    flex-direction: column;
+  }
+  .service-highlight-box {
+    position: static;
+    margin-top: 24px;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* ===== ServicesGrid.css ===== */
+.services-grid-section {
+  width: 100%;
+  margin: 6rem 0;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  text-align: center;
+}
+
+.services-grid-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.services-grid-description{
+  margin-bottom: 4rem;
+}
+
+.services-grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.services-grid-card {
+  background: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  position: relative;
+  cursor: pointer;
+  min-height: 320px;
+}
+
+.services-grid-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: filter 0.2s;
+}
+
+.services-grid-label {
+  background: #CCC9F8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  width: 100%;
+  letter-spacing: 1px;
+  border-radius: 0 0 0 0;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  text-align: center;
+  pointer-events: none;
+}
+
+.services-grid-label.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.services-grid-desc {
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  padding: 18px 18px 12px 18px;
+  width: 100%;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 12px rgba(204,201,248,0.10);
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  z-index: 2;
+  animation: fadeInUp 0.25s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.services-grid-card:hover .services-grid-img {
+  filter: brightness(0.85);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services-grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .services-grid-list {
+    grid-template-columns: 1fr;
+  }
+  .services-grid-card {
+    width: 90vw;
+    max-width: 350px;
+  }
+}
+
+/* ===== PromotionBanner.css ===== */
+.promotion-banner {
+  background: #CCC9F8;
+  padding: 48px 0 48px 0;
+  text-align: center;
+  margin: 6rem auto;
+  max-width: 600px;
+}
+
+.promotion-banner-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 100px 3rem;
+  letter-spacing: 1px;
+}
+
+.promotion-banner-btn {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.promotion-banner-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.promotion-banner-btn:hover {
+  background: #b3b0e6;
+  color: #fff;
+}
+
+.promotion-banner-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* ===== CustomerReviewSlider.css ===== */
+.customer-review-slider {
+  background: none; /* Không nền, chỉ khung trắng khi cần */
+  max-width: 700px; /* Chiều rộng tối đa */
+  margin: 48px auto; /* Căn giữa theo chiều ngang, cách trên dưới 48px */
+  padding: 48px 32px 36px 32px; /* Padding trên, ngang, dưới */
+  text-align: center; /* Căn giữa nội dung */
+  position: relative; /* Để các phần tử con định vị tuyệt đối */
+  user-select: none; /* Không cho chọn text */
+  transition: box-shadow 0.2s; /* Hiệu ứng bóng khi hover */
+}
+
+.customer-review-slider:hover {
+  cursor: grab; /* Khi hover sẽ hiện icon bàn tay kéo */
+}
+
+.customer-review-title {
+  font-size: 2rem; /* Cỡ chữ lớn cho tiêu đề */
+  font-weight: 600; /* Đậm */
+  margin-bottom: 24px; /* Cách dưới */
+  color: #222; /* Màu chữ */
+}
+
+.customer-review-content {
+  font-size: 1.15rem; /* Cỡ chữ nội dung */
+  color: #222; /* Màu chữ */
+  margin-bottom: 28px; /* Cách dưới */
+  display: flex; /* Hiển thị flex để căn giữa các phần tử con */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+  gap: 8px; /* Khoảng cách giữa các phần tử con */
+  min-height: 90px; /* Đảm bảo chiều cao tối thiểu */
+  /* Hiệu ứng chuyển mượt mà khi đổi review */
+  transition: opacity 0.5s, transform 0.5s;
+  opacity: 1;
+  transform: translateX(0); /* Bắt đầu ở vị trí gốc */
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); /* Đảm bảo không có biến dạng */
+}
+
+/* Khi chuyển review sẽ có hiệu ứng mờ và trượt sang trái */
+.customer-review-content.fade-out {
+  opacity: 0;
+  transform: translateX(-40px);
+  pointer-events: none;
+}
+
+/* Khi review mới xuất hiện sẽ có hiệu ứng hiện lên */
+.customer-review-content.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.review-quote-icon {
+  font-size: 2.2rem; /* Cỡ lớn cho icon dấu ngoặc kép */
+  color: #CCC9F8; /* Màu tím nhạt */
+  font-family: serif;
+  margin: 0 8px;
+}
+
+.review-quote-left,
+.review-quote-right {
+  font-size: 2.5rem; /* Cỡ lớn cho dấu ngoặc nhọn */
+  color: #CCC9F8;
+  font-family: serif;
+  margin: 0 8px;
+}
+
+.review-text {
+  font-size: 1.15rem;
+  color: #222;
+  font-style: italic; /* Chữ nghiêng */
+  max-width: 500px; /* Giới hạn chiều rộng */
+  display: inline-block;
+  text-align: center;
+}
+
+.customer-review-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px; /* Khoảng cách giữa các nút */
+}
+
+.review-arrow {
+  background: none; /* Không nền */
+  border: none; /* Không viền */
+  font-size: 2rem; /* Cỡ lớn cho mũi tên */
+  color: #CCC9F8; /* Màu tím nhạt */
+  cursor: pointer;
+  padding: 0 10px;
+  transition: color 0.2s;
+}
+
+.review-arrow:hover {
+  color: #a7a3e0; /* Đậm hơn khi hover */
+}
+
+.review-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-dot {
+  width: 10px;
+  height: 10px;
+  background: #CCC9F8;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4; /* Mờ khi không active */
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.review-dot.active {
+  opacity: 1; /* Đậm khi active */
+  background: #CCC9F8;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  .customer-review-slider {
+    padding: 24px 8px 18px 8px;
+  }
+  .customer-review-title {
+    font-size: 1.2rem;
+  }
+  .review-text {
+    font-size: 1rem;
+    max-width: 90vw;
+  }
+}
+
+/* ===== BookingBanner.css ===== */
+.booking-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  height: 60vh;
+  padding-left: 0;
+}
+
+.booking-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+
+/* ===== BookingForm.css ===== */
+/* Container chính của form đặt lịch, căn giữa và giới hạn chiều rộng */
+.booking-form-container {
+  max-width: 650px;
+  margin: 32px auto;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 15rem;
+}
+
+/* Tiêu đề hướng dẫn đặt lịch */
+.booking-guide-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Form đặt lịch, sắp xếp các trường theo cột */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Tiêu đề từng bước trong form */
+.booking-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Input trong form đặt lịch, bo tròn, padding lớn */
+.booking-input {
+  width: 60%;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+/* Hiệu ứng khi input được focus */
+.booking-input:focus {
+  border: 1.5px solid #CCC9F8;
+}
+
+/* Nhóm các nút điều hướng bước (Back/Next), căn ngang và cách xa nhau */
+.booking-step-btns {
+  display: flex;
+  gap: 50px;
+  margin-top: 120px;
+}
+
+/* Style chung cho các nút trong form */
+.booking-btn {
+  background: #CCC9F8;
+  color: #222;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Style cho nút khi bị disable */
+.booking-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Hiệu ứng hover cho nút (chữ trắng khi hover) */
+.booking-btn:hover:not(:disabled) {
+  color: #fff;
+}
+
+/* Mũi tên chuyển bước, ẩn mặc định, hiện khi hover */
+.arrow {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.2s, margin 0.2s;
+  font-size: 1.1em;
+}
+
+/* Hiện mũi tên phải khi hover nút Next */
+.booking-btn-next:hover .arrow-right {
+  opacity: 1;
+  margin-left: 8px;
+}
+
+/* Hiện mũi tên trái khi hover nút Back */
+.booking-btn-back:hover .arrow-left {
+  opacity: 1;
+  margin-right: 8px;
+}
+
+/* Box tóm tắt thông tin đặt lịch */
+.booking-summary {
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Thông báo xác nhận đặt lịch, căn giữa */
+.booking-confirm-message {
+  text-align: justify;
+  padding: 24px 0 0 0;
+}
+
+/* Tiêu đề xác nhận đặt lịch */
+.booking-confirm-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Ghi chú nhỏ trong form */
+.booking-note {
+  color: #555;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+/* Link trong ghi chú */
+.booking-note a {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* Ẩn mũi tên mặc định của select, dùng mũi tên custom */
+.booking-input.select-arrow-left {
+  appearance: none;
+  /* Chuẩn */
+  -webkit-appearance: none;
+  /* Safari, Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  padding-right: 36px;
+  /* Để nội dung không đè lên mũi tên custom */
+  background: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 30px center/20px 20px;
+  /* Mũi tên SVG đặt bên phải, căn giữa dọc */
+}
+
+/* Bọc select để có thể dùng ::after vẽ mũi tên xoay */
+.select-wrapper {
+  position: relative;
+  /* Để ::after định vị tuyệt đối theo .select-wrapper */
+  display: inline-block;
+  width: 60%;
+}
+
+/* Reset background và padding cho select khi dùng ::after */
+.select-wrapper select.booking-input.select-arrow-left {
+  width: 100%;
+  padding-right: 60px;
+  /* Để nội dung không đè lên mũi tên */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  /* Không dùng background SVG nữa */
+}
+
+/* Vẽ mũi tên bằng ::after, đặt tuyệt đối bên phải, căn giữa dọc */
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  /* Căn giữa dọc */
+  right: 30px;
+  /* Cách mép phải 30px */
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  /* Không chặn thao tác chuột */
+  background: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat center/20px 20px;
+  /* Mũi tên SVG căn giữa */
+  transform: translateY(-50%) rotate(0deg);
+  /* Ban đầu không xoay */
+  transition: transform 0.3s;
+  /* Hiệu ứng xoay mượt mà */
+}
+
+/* Khi select được focus (mở), xoay mũi tên 180 độ */
+/* (Cách này dùng nếu bạn thêm một thẻ .select-arrow sau select, nhưng bạn đang dùng ::after nên selector này không cần thiết) */
+.select-wrapper select:focus+.select-arrow,
+.select-wrapper select:active+.select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Khi select được focus (mở), xoay mũi tên SVG trong ::after */
+.select-wrapper select:focus~ ::after,
+.select-wrapper select:active~ ::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Menu styles */
+.main-menu {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 18px 40px 0 0;
+  background: none;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  padding: 8px 18px;
+  border-radius: 30px;
+  line-height: 1;
+  /* Chữ và icon sát nhau hơn */
+}
+
+.menu-btn .menu-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  transition: filter 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Khi hover hoặc active */
+.menu-btn:hover,
+.menu-btn.active {
+  margin-left: 10px;
+  color: #CCC9F8;
+  background: #f5f5fa;
+}
+
+.menu-btn:hover .menu-icon,
+.menu-btn.active .menu-icon {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
+}
+
+/* Khi header scrolled (nền trắng), đổi màu nút và icon */
+.header-scrolled .menu-btn,
+.header-scrolled .menu-btn:hover,
+.header-scrolled .menu-btn.active {
+  background: #fff;
+  color: #222;
+}
+
+.header-scrolled .menu-btn {
+  margin-right: 15px;
+}
+
+.header-scrolled .menu-btn .menu-icon,
+.header-scrolled .menu-btn:hover .menu-icon,
+.header-scrolled .menu-btn.active .menu-icon {
+  filter: none;
+}
+
+
+/* Thêm media queries cho responsive */
+/* Mỗi 1 thiết bị sẽ có một @media screen riêng để điều chỉnh giao diện cho phù hợp */
+
+/* Large devices (desktops) */
+@media screen and (max-width: 1200px) {
+  .banner-content {
+    margin-right: 80px;
+    max-width: 400px;
+    padding: 40px 30px;
+  }
+
+  .service-showcase,
+  .home-blog,
+  .home-hair-blog {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .three-col-gallery {
+    padding: 0 2rem;
+  }
+
+  .beauty-blog-container {
+    padding: 6rem 5rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (max-width: 992px) {
+  .banner-content {
+    margin-right: 40px;
+    max-width: 350px;
+  }
+
+  .banner-title {
+    font-size: 1.8rem;
+  }
+
+  .service-showcase,
+  .home-blog,
+  .home-hair-blog {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .service-row {
+    gap: 40px;
+  }
+
+  .service-col {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .home-blog,
+  .home-hair-blog {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .home-blog-content-col,
+  .home-hair-blog-content-col {
+    text-align: center;
+  }
+
+  .three-col-gallery {
+    flex-direction: column;
+  }
+
+  .gallery-col {
+    width: 100%;
+  }
+
+  .beauty-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .beauty-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contact-section-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media screen and (max-width: 768px) {
+  .banner-bg {
+    justify-content: center;
+  }
+
+  .banner-content {
+    margin: 0 20px;
+    max-width: 100%;
+  }
+
+  .service-col {
+    flex: 1 1 100%;
+  }
+
+  .home-blog-btn,
+  .home-hair-blog-btn {
+    margin: 0 auto;
+  }
+
+  .beauty-blog-container {
+    padding: 4rem 2rem;
+  }
+
+  .beauty-card {
+    width: 100%;
+  }
+
+  .blog-grid-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .blog-grid-list {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form-container {
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .booking-input,
+  .select-wrapper {
+    width: 100%;
+  }
+
+  .booking-step-btns {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+}
+
+/* Extra small devices (phones) */
+@media screen and (max-width: 576px) {
+  .banner-content {
+    padding: 30px 20px;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+  }
+
+  .service-showcase {
+    padding-top: 3rem;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .home-blog,
+  .home-hair-blog {
+    padding-top: 3rem;
+  }
+
+  .home-blog-title,
+  .home-hair-blog-title {
+    font-size: 1.3rem;
+  }
+
+  .beauty-blog-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+  }
+
+  .contact-input {
+    width: 100%;
+    padding: 15px 25px;
+  }
+
+  .contact-social-icons {
+    justify-content: center;
+  }
+
+  .about-title,
+  .blog-title,
+  .services-title,
+  .contacts-title,
+  .booking-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .story-line {
+    height: 250px;
+  }
+
+  .customer-review-slider {
+    padding: 20px 15px;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fix header and navigation for mobile */
+@media screen and (max-width: 768px) {
+  .main-menu {
+    padding: 12px 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .menu-btn .menu-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Fix footer for mobile */
+@media screen and (max-width: 576px) {
+  .footer-social-icons-row {
+    gap: 20px;
+  }
+
+  .footer-social-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Responsive cho trang Services */
+
+/* Service Highlight Section */
+@media screen and (max-width: 1200px) {
+  .service-highlight-bg {
+    padding: 6rem 0 20px 0;
+  }
+
+  .service-highlight-content {
+    padding: 0 2rem;
+  }
+
+  .service-highlight-img {
+    width: 50%;
+  }
+
+  .service-highlight-decor {
+    left: 280px;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .service-highlight-title {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .service-highlight-img {
+    width: 60%;
+  }
+
+  .service-highlight-box {
+    right: 5%;
+    min-width: 280px;
+    padding: 24px 28px 20px 28px;
+  }
+
+  .service-highlight-decor {
+    left: 220px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-highlight-bg {
+    padding: 4rem 0 15px 0;
+  }
+
+  .service-highlight-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-highlight-img {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .service-highlight-box {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .service-highlight-decor {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .service-highlight-title {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+
+  .service-highlight-img {
+    width: 90%;
+  }
+
+  .service-highlight-box {
+    width: 95%;
+    padding: 20px 24px 16px 24px;
+  }
+
+  .service-highlight-box-title {
+    font-size: 1.1rem;
+  }
+
+  .service-highlight-btn {
+    padding: 15px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Services Grid Section */
+@media screen and (max-width: 1200px) {
+  .services-grid-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services-grid-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .services-grid-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-grid-title {
+    font-size: 1.8rem;
+  }
+
+  .services-grid-description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services-grid-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 4rem 0;
+  }
+
+  .services-grid-title {
+    font-size: 1.5rem;
+  }
+
+  .services-grid-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-grid-card {
+    min-height: 280px;
+  }
+
+  .services-grid-img {
+    height: 300px;
+  }
+}
+
+/* Promotion Banner */
+@media screen and (max-width: 768px) {
+  .promotion-banner {
+    margin: 4rem auto;
+    padding: 36px 0;
+  }
+
+  .promotion-banner-title {
+    font-size: 1.8rem;
+    margin: 0 40px 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .promotion-banner {
+    margin: 3rem auto;
+    padding: 24px 0;
+  }
+
+  .promotion-banner-title {
+    font-size: 1.4rem;
+    margin: 0 20px 1.5rem;
+  }
+
+  .promotion-banner-btn {
+    padding: 15px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Review Slider Section */
+@media screen and (max-width: 768px) {
+  .customer-review-slider {
+    margin: 36px auto;
+  }
+
+  .customer-review-content {
+    min-height: 120px;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .customer-review-slider {
+    margin: 24px auto;
+  }
+
+  .customer-review-title {
+    font-size: 1.5rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .review-quote-left,
+  .review-quote-right {
+    display: none;
+  }
+}
+
+/* Services Intro Section */
+@media screen and (max-width: 768px) {
+  .services-intro {
+    padding: 36px 20px;
+    margin: 4rem auto;
+  }
+
+  .services-intro-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services-intro {
+    padding: 24px 15px;
+    margin: 3rem auto;
+  }
+
+  .services-intro-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ================== LoginPage ================== */
+.auth-container {
+  max-width: 400px;
+  margin: 8rem auto;
+  background: none;
+  padding: 36px 32px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-input {
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: 1px solid #CCC9F8;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.auth-input:focus {
+  border: 1.5px solid #CCC9F8;
+}
+
+.auth-btn {
+  background: #CCC9F8;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.auth-btn:hover {
+  background: #a7a3e0;
+}
+
+.auth-error {
+  color: #e74c3c;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.auth-link {
+  margin-top: 18px;
+  font-size: 1rem;
+}
+
+.auth-link a {
+  color: #CCC9F8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Register Page */
+.auth-success {
+  color: #27ae60;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+.auth-link-btn {
+  background: none;
+  border: none;
+  color: #CCC9F8;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* Hiệu ứng fade-in khi lướt đến */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== SocialIcons.css icon đăng nhập/ đăng ký ===== */
+.social-icon-btn:hover {
+  background: #CCC9F8 !important;
+  border-radius: 50%;
+}
