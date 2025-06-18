@@ -57,6 +57,8 @@ GMAIL_PASS=your_app_password
 TWILIO_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth_token
 TWILIO_PHONE=your_twilio_phone
+
+REACT_APP_API_URL=https://your-backend.onrender.com
 ```
 
 4. Chạy ứng dụng:
