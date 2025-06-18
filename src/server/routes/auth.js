@@ -5,9 +5,14 @@ const { sqlConfig } = require('../config/database');
 
 // Đăng ký
 router.post('/register', async (req, res) => {
-  const { username, password } = req.body;
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Thiếu thông tin.' });
+  console.log("Register Request Body:", req.body);
+  const { username, email, password, confirmPassword } = req.body;
+  if (!username || !email || !password || !confirmPassword) {
+    return res.status(400).json({ message: "Vui lòng nhập đầy đủ thông tin!" });
+  }
+  
+  if (req.body.password !== req.body.confirmPassword) {
+    return res.status(400).json({ message: "Mật khẩu xác nhận không khớp" });
   }
   
   let pool;
@@ -24,7 +29,8 @@ router.post('/register', async (req, res) => {
     await pool.request()
       .input('username', sql.VarChar, username)
       .input('password', sql.VarChar, password)
-      .query('INSERT INTO Users (username, password) VALUES (@username, @password)');
+      .input('email', sql.VarChar, email)
+      .query('INSERT INTO Users (username, password, email) VALUES (@username, @password, @email)');
       
     res.json({ message: 'Đăng ký thành công!' });
   } catch (err) {

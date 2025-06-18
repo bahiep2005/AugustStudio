@@ -5,7 +5,7 @@ import logo from "../assets/logo/august-logo-den.png";
 
 // Không dùng useNavigate, dùng window.location
 const RegisterPage = ({ onSwitchToLogin }) => {
-  const [form, setForm] = useState({ username: "", password: "", confirm: "" });
+  const [form, setForm] = useState({ username: "", email: "", password: "", confirm: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,7 @@ const RegisterPage = ({ onSwitchToLogin }) => {
 
   const handleRegister = async e => {
     e.preventDefault();
-    if (!form.username || !form.password || !form.confirm) {
+    if (!form.username || !form.email || !form.password || !form.confirm) {
       setError("Vui lòng nhập đầy đủ thông tin.");
       return;
     }
@@ -32,16 +32,23 @@ const RegisterPage = ({ onSwitchToLogin }) => {
     try {
       const response = await axios.post('/api/auth/register', {
         username: form.username,
-        password: form.password
+        email: form.email,
+        password: form.password,
+        confirmPassword: form.confirm
       });
       
-      // Lưu username vào localStorage
-      localStorage.setItem('username', form.username);
-      setSuccess('Đăng ký thành công!');
-      setForm({ username: '', password: '', confirm: '' });
-      setTimeout(() => {
-        window.location.href = '/';
-      }, 1000);
+      if (response.data.message === 'Đăng ký thành công!') {
+        // Lưu thông tin người dùng vào localStorage
+        localStorage.setItem('username', form.username);
+        localStorage.setItem('email', form.email);
+        setSuccess('Đăng ký thành công!');
+        setForm({ username: '', email: '', password: '', confirm: '' });
+        
+        // Chuyển hướng sau 1 giây
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1000);
+      }
     } catch (err) {
       console.error('Register error:', err);
       if (err.response) {
@@ -69,6 +76,15 @@ const RegisterPage = ({ onSwitchToLogin }) => {
           name="username"
           placeholder="Tên đăng nhập"
           value={form.username}
+          onChange={handleChange}
+          className="auth-input"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={form.email}
           onChange={handleChange}
           className="auth-input"
           required
