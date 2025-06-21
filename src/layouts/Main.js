@@ -704,7 +704,7 @@ const BookingForm = () => {
     e.preventDefault();
     const username = localStorage.getItem('username') || '';
     try {
-      const response = await fetch('/api/booking', {
+      const response = await fetch('http://localhost:5001/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, username })
@@ -876,7 +876,7 @@ const ContactSection = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('http://localhost:5001/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

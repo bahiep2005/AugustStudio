@@ -1,3 +1,308 @@
+/* ===== Banner.css ===== */
+.banner-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+}
+
+.banner-content {
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 60px 45px;
+  max-width: 450px;
+  margin-right: 150px;
+  text-align: justify;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.banner-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.banner-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+.banner-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.banner-btn:hover {
+  color: #fff;
+}
+
+.banner-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* ===== HomeShowcase.css ===== */
+.service-showcase {
+  width: 100%;
+  background: none;
+  border-radius: 18px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+}
+
+.service-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  color: #CCC9F8;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  /* Đảm bảo các cột cao bằng nhau */
+}
+
+.service-col {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Đảm bảo chiều cao bằng nhau cho các cột */
+}
+
+.service-icon {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.service-titles {
+  margin-bottom: 8px;
+}
+
+.service-col-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+  /* căn giữa */
+  margin-bottom: 10px;
+  min-height: 48px;
+  /* Đảm bảo chiều cao cố định cho tiêu đề */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.service-col-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 2px;
+  text-align: justify;
+  min-height: 90px;
+  /* Đảm bảo chiều cao cố định cho phụ đề */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ===== HomeBlog.css ===== */
+.home-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: none;
+  max-width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+}
+
+.home-blog-img-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-blog-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.home-blog-content-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.home-blog-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.home-blog-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.home-blog-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  margin-right: auto;
+}
+
+.home-blog-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.home-blog-btn:hover {
+  color: #fff;
+}
+
+.home-blog-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+/* ===== HomeHairBlog.css ===== */
+.home-hair-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: none;
+  max-width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.home-hair-blog-content-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.home-hair-blog-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.home-hair-blog-subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.home-hair-blog-btn {
+  background: #CCC9F8;
+  color: #000000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  margin-right: auto;
+}
+
+.home-hair-blog-btn .arrow {
+  opacity: 0;
+  margin-left: 8px;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+
+.home-hair-blog-btn:hover {
+  color: #fff;
+}
+
+.home-hair-blog-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 16px;
+}
+
+.home-hair-blog-img-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hair-blog-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HomeIntro.css ===== */
+.home-intro {
+  background: #CCC9F8;
+  width: 100%;
+  padding: 50px 0 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5rem auto;
+}
+
+.home-intro-title {
+  color: #222;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 1px;
+}
 /* ===== AboutBanner.css ===== */
 .about-container {
   display: flex;
@@ -690,311 +995,6 @@
   filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(748%) hue-rotate(202deg) brightness(104%) contrast(101%);
 }
 
-/* ===== Banner.css ===== */
-.banner-bg {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  position: relative;
-}
-
-.banner-content {
-  background: #ffffff;
-  border-radius: 50px;
-  padding: 60px 45px;
-  max-width: 450px;
-  margin-right: 150px;
-  text-align: justify;
-}
-
-.banner-title {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 18px;
-  color: #222;
-}
-
-.banner-subtitle {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 28px;
-}
-
-.banner-btn {
-  background: #CCC9F8;
-  color: #000000;
-  border: none;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  position: relative;
-}
-
-.banner-btn .arrow {
-  opacity: 0;
-  margin-left: 8px;
-  transition: opacity 0.2s, margin-left 0.2s;
-}
-
-.banner-btn:hover {
-  color: #fff;
-}
-
-.banner-btn:hover .arrow {
-  opacity: 1;
-  margin-left: 16px;
-}
-
-/* ===== HomeShowcase.css ===== */
-.service-showcase {
-  width: 100%;
-  background: none;
-  border-radius: 18px;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-top: 6rem;
-}
-
-.service-title {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 2rem;
-  margin-bottom: 6rem;
-  color: #CCC9F8;
-}
-
-.service-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 70px;
-  flex-wrap: wrap;
-  align-items: stretch;
-  /* Đảm bảo các cột cao bằng nhau */
-}
-
-.service-col {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Đảm bảo chiều cao bằng nhau cho các cột */
-}
-
-.service-icon {
-  width: 60%;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 30px;
-}
-
-.service-titles {
-  margin-bottom: 8px;
-}
-
-.service-col-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #222;
-  text-align: center;
-  /* căn giữa */
-  margin-bottom: 10px;
-  min-height: 48px;
-  /* Đảm bảo chiều cao cố định cho tiêu đề */
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.service-col-subtitle {
-  font-size: 1rem;
-  color: #666;
-  margin-top: 2px;
-  text-align: justify;
-  min-height: 90px;
-  /* Đảm bảo chiều cao cố định cho phụ đề */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-/* ===== HomeBlog.css ===== */
-.home-blog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  background: none;
-  max-width: 100%;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-top: 6rem;
-}
-
-.home-blog-img-col {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-blog-img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-.home-blog-content-col {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-}
-
-.home-blog-title {
-  font-size: 1.6rem;
-  margin-bottom: 0;
-}
-
-.home-blog-subtitle {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 0;
-}
-
-.home-blog-btn {
-  background: #CCC9F8;
-  color: #000000;
-  border: none;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  position: relative;
-  margin-right: auto;
-}
-
-.home-blog-btn .arrow {
-  opacity: 0;
-  margin-left: 8px;
-  transition: opacity 0.2s, margin-left 0.2s;
-}
-
-.home-blog-btn:hover {
-  color: #fff;
-}
-
-.home-blog-btn:hover .arrow {
-  opacity: 1;
-  margin-left: 16px;
-}
-
-/* ===== HomeHairBlog.css ===== */
-.home-hair-blog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  background: none;
-  max-width: 100%;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.home-hair-blog-content-col {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-}
-
-.home-hair-blog-title {
-  font-size: 1.6rem;
-  margin-bottom: 0;
-}
-
-.home-hair-blog-subtitle {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 0;
-}
-
-.home-hair-blog-btn {
-  background: #CCC9F8;
-  color: #000000;
-  border: none;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  position: relative;
-  margin-right: auto;
-}
-
-.home-hair-blog-btn .arrow {
-  opacity: 0;
-  margin-left: 8px;
-  transition: opacity 0.2s, margin-left 0.2s;
-}
-
-.home-hair-blog-btn:hover {
-  color: #fff;
-}
-
-.home-hair-blog-btn:hover .arrow {
-  opacity: 1;
-  margin-left: 16px;
-}
-
-.home-hair-blog-img-col {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-hair-blog-img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== HomeIntro.css ===== */
-.home-intro {
-  background: #CCC9F8;
-  width: 100%;
-  padding: 50px 0 50px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 5rem auto;
-}
-
-.home-intro-title {
-  color: #222;
-  font-size: 2rem;
-  text-align: center;
-  margin: 0;
-  letter-spacing: 1px;
-}
 
 /* ===== FooterSocial.css (trong home) ===== */
 .footer-social {
