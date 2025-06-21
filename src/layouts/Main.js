@@ -313,7 +313,7 @@ const BeautyBlog = ({ onServices }) => {
 const blogData = [
   {
     img: require("../assets/images/cham_soc_mong_tay.jpg"),
-    title: "Thiết kế móng tinh tế, nâng tầm phong cách",
+    title: "Thiết kế móng tinh xảo, nâng tầm phong cách",
     desc: "Những mẫu nail tinh xảo giúp bạn nổi bật từng chi tiết. Ý tưởng nail thời thượng, cá tính cho vẻ ngoài mỗi ngày.",
     price: "200.000đ"
   },
@@ -485,13 +485,13 @@ const PromotionBanner = ({ onBlog }) => (
 
 const reviews = [
   {
-    text: `“Nghệ thuật làm móng rất đẹp và nhân viên rất thân thiện, chuyên nghiệp. Tuy nhiên, lớp sơn bắt đầu bong sau vài ngày, hơi thất vọng. Hy vọng lần sau sẽ bền hơn!”`
+    text: `"Nghệ thuật làm móng rất đẹp và nhân viên rất thân thiện, chuyên nghiệp. Tuy nhiên, lớp sơn bắt đầu bong sau vài ngày, hơi thất vọng. Hy vọng lần sau sẽ bền hơn!"`
   },
   {
-    text: `“Không gian sang trọng, dịch vụ chu đáo. Mình rất hài lòng với kiểu tóc mới, chắc chắn sẽ quay lại!”`
+    text: `"Không gian sang trọng, dịch vụ chu đáo. Mình rất hài lòng với kiểu tóc mới, chắc chắn sẽ quay lại!"`
   },
   {
-    text: `“Đội ngũ tư vấn nhiệt tình, sản phẩm chất lượng. Giá cả hợp lý, trải nghiệm tuyệt vời!”`
+    text: `"Đội ngũ tư vấn nhiệt tình, sản phẩm chất lượng. Giá cả hợp lý, trải nghiệm tuyệt vời!"`
   }
 ];
 
@@ -601,9 +601,9 @@ const CustomerReviewSlider = () => {
         }}
       >
         <span className="review-quote-left">{'{'}</span>
-        <span className="review-quote-icon">“</span>
+        <span className="review-quote-icon">"</span>
         <span className="review-text">{reviews[current].text}</span>
-        <span className="review-quote-icon">”</span>
+        <span className="review-quote-icon">"</span>
         <span className="review-quote-right">{'}'}</span>
       </div>
       <div className="customer-review-controls">
@@ -861,15 +861,42 @@ const ContactBanner = () => (
 // ContactSection Component
 const ContactSection = () => {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    // Reset status khi user bắt đầu nhập lại
+    if (submitStatus) setSubmitStatus(null);
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Tin nhắn của bạn đã được gửi!');
-    setForm({ name: '', phone: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setForm({ name: '', phone: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        alert(data.message || 'Có lỗi xảy ra khi gửi tin nhắn');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      alert('Không thể kết nối đến server. Vui lòng thử lại sau!');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -907,6 +934,16 @@ const ContactSection = () => {
         </div>
         <div className="contact-col contact-form-col">
           <div className="contact-title">Form liên hệ</div>
+          {submitStatus === 'success' && (
+            <div className="contact-success-message">
+              ✓ Tin nhắn của bạn đã được gửi thành công! Chúng tôi sẽ phản hồi sớm nhất có thể.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="contact-error-message">
+              ✗ Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại!
+            </div>
+          )}
           <form className="contact-form" onSubmit={handleSubmit} autoComplete="off">
             <div className="contact-form-row">
               <input
@@ -917,6 +954,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 required
                 className="contact-input"
+                disabled={isSubmitting}
               />
               <input
                 type="text"
@@ -926,6 +964,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 required
                 className="contact-input"
+                disabled={isSubmitting}
               />
             </div>
             <div className="contact-form-row">
@@ -937,6 +976,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 required
                 className="contact-input"
+                disabled={isSubmitting}
               />
             </div>
             <div className="contact-form-row">
@@ -948,10 +988,15 @@ const ContactSection = () => {
                 required
                 className="contact-input contact-textarea"
                 rows={3}
+                disabled={isSubmitting}
               />
             </div>
-            <button type="submit" className="contact-submit-btn">
-              Gửi tin nhắn  <span className="arrow">→</span>
+            <button 
+              type="submit" 
+              className="contact-submit-btn"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Đang gửi...' : 'Gửi tin nhắn'}  <span className="arrow">→</span>
             </button>
           </form>
           <div className="contact-title contact-social-title">Mạng xã hội</div>
@@ -983,6 +1028,65 @@ const ContactPage = () => (
   </>
 );
 
+// BackToTopButton Component
+const BackToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    // Cuộn từ từ lên đầu trang với animation mượt mà
+    const startPosition = window.pageYOffset;
+    const duration = 1000; // Thời gian cuộn (1 giây)
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t) => {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    };
+
+    const animateScroll = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Sử dụng easing function để tạo hiệu ứng mượt mà
+      const easeProgress = easeInOutCubic(progress);
+      const currentPosition = startPosition - (startPosition * easeProgress);
+      
+      window.scrollTo(0, currentPosition);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
+  return (
+    <>
+      {isVisible && (
+        <button
+          className="back-to-top-btn"
+          onClick={scrollToTop}
+          aria-label="Cuộn lên đầu trang"
+        >
+          <span className="back-to-top-arrow">↑</span>
+        </button>
+      )}
+    </>
+  );
+};
 
 // Update Main Component's switch case
 const Main = ({ activePage, onExplore, onReadMore, onBooking, onBlog }) => {
@@ -1008,7 +1112,12 @@ const Main = ({ activePage, onExplore, onReadMore, onBooking, onBlog }) => {
       content = <Home onExplore={onExplore} onReadMore={onReadMore} onBlog={onBlog} />;
       break;
   }
-  return <main className="main">{content}</main>;
+  return (
+    <main className="main">
+      {content}
+      <BackToTopButton />
+    </main>
+  );
 };
 
 export default Main;

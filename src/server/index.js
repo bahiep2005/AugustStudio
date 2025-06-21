@@ -4,6 +4,7 @@ const cors = require('cors');
 const { connectDB } = require('./config/database');
 const bookingRoutes = require('./routes/booking');
 const authRoutes = require('./routes/auth');
+const contactRoutes = require('./routes/contact');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use((err, req, res, next) => {
 // Routes
 app.use('/api/booking', bookingRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/contact', contactRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

@@ -1193,7 +1193,7 @@ contacts-title,
   }
 
   .service-col {
-    width: 100%;
+    flex: 1 1 100%;
     margin-bottom: 30px;
   }
 
@@ -2136,6 +2136,8 @@ contacts-title,
 
 /* Extra small devices (phones) */
 @media screen and (max-width: 576px) {
+  
+  /* Banner Section */
   .banner-content {
     padding: 30px 20px;
   }
@@ -2143,62 +2145,40 @@ contacts-title,
   .banner-title {
     font-size: 1.5rem;
   }
-
-  .service-showcase {
-    padding-top: 3rem;
+  
+  .banner-subtitle {
+    font-size: 1rem;
   }
 
-  .service-title {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .home-blog,
-  .home-hair-blog {
-    padding-top: 3rem;
-  }
-
-  .home-blog-title,
-  .home-hair-blog-title {
-    font-size: 1.3rem;
-  }
-
-  .beauty-blog-title {
-    font-size: 1.8rem;
-  }
-
-  .contact-form-row {
-    flex-direction: column;
-  }
-
-  .contact-input {
-    width: 100%;
-    padding: 15px 25px;
-  }
-
-  .contact-social-icons {
-    justify-content: center;
-  }
-
+  /* Section Titles */
+  .service-title,
   .about-title,
   .blog-title,
   .services-title,
-  .contacts-title,
-  .booking-title {
-    font-size: 2rem;
+  .contacts-title {
+    font-size: 1.8rem;
     text-align: center;
   }
-
-  .story-line {
-    height: 250px;
+  
+  /* Form Elements */
+  .booking-input,
+  .contact-input {
+    padding: 15px 25px;
   }
 
-  .customer-review-slider {
-    padding: 20px 15px;
+  /* Buttons */
+  .banner-btn,
+  .home-blog-btn,
+  .home-hair-blog-btn,
+  .booking-btn,
+  .contact-submit-btn {
+    padding: 12px 24px;
+    font-size: 14px;
   }
 
-  .review-text {
-    font-size: 0.95rem;
+  /* Maps */
+  .contact-maps-iframe-wrapper iframe {
+    height: 200px;
   }
 }
 
@@ -2576,6 +2556,141 @@ contacts-title,
 
 /* ===== SocialIcons.css icon đăng nhập/ đăng ký ===== */
 .social-icon-btn:hover {
-  background: #CCC9F8 !important;
+  transform: scale(1.1);
+}
+
+/* Contact Form Success/Error Messages */
+.contact-success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.contact-error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Disabled state for form inputs */
+.contact-input:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.contact-submit-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.contact-submit-btn:disabled:hover {
+  background-color: #6c757d;
+  transform: none;
+}
+
+/* Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #CCC9F8 0%, #9b90f9 100%);
+  border: none;
   border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.3s ease forwards;
+}
+
+.back-to-top-btn:hover {
+  background: linear-gradient(135deg, #a098eb 0%, #8f86f5 100%);
+  transform: translateY(-3px);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top-arrow {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover .back-to-top-arrow {
+  transform: translateY(-2px);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Back to Top Button */
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .back-to-top-arrow {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .back-to-top-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .back-to-top-arrow {
+    font-size: 18px;
+  }
 }
